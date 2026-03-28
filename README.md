@@ -76,6 +76,19 @@ It supports:
 - top-wallet ranking by net flow, inflow, outflow, or transaction count
 - an auto-generated ops brief and JSON context pack
 
+## Demo
+
+Current UI preview before a BigQuery connection is loaded:
+
+![Dashboard empty state](docs/images/dashboard-empty-state.png)
+
+Demo notes:
+
+- the dashboard is designed to connect live to BigQuery from the sidebar
+- the screenshot above shows the initial connection state before warehouse tables are loaded
+- once connected, the app exposes interactive views for `Overview`, `Assets`, `Wallets`, and `Ops Brief`
+- a future improvement is to publish a hosted demo after a stable GCP setup is in place
+
 ## Repository structure
 
 ```text
@@ -166,7 +179,7 @@ Use the provided examples instead:
 To make the repository stronger for recruiters:
 
 - keep the current architecture and SQL models visible
-- add one or two screenshots of the Streamlit dashboard
+- keep at least one screenshot of the dashboard in the README
 - add a short note in the README after your first live BigQuery run
 - optionally publish a short Loom or GIF walkthrough
 
@@ -185,4 +198,3 @@ To make the repository stronger for recruiters:
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-
