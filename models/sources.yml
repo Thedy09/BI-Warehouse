@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: ethereum
+    database: bigquery-public-data
+    schema: goog_blockchain_ethereum_mainnet_us
+    tables:
+      - name: blocks
+        description: Ethereum block-level public data in BigQuery.
+      - name: transactions
+        description: Ethereum transaction-level public data in BigQuery.
+      - name: receipts
+        description: Ethereum receipt data including gas usage and status.
+      - name: token_transfers
+        description: Token transfer events derived from Ethereum public data.
+      - name: accounts
+        description: Ethereum account metadata, including contract identification.
+

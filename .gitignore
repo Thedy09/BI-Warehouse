@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.dbt/
+.streamlit/secrets.toml
+logs/
+target/
+dbt_packages/
+artifacts/*.csv
+artifacts/*.json
+artifacts/*.md

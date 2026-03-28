@@ -1,0 +1,74 @@
+version: 2
+
+seeds:
+  - name: monitored_assets
+    description: Real stablecoin contract metadata used for filtered analytics.
+    columns:
+      - name: contract_address
+        tests:
+          - not_null
+          - unique
+      - name: asset_symbol
+        tests:
+          - not_null
+
+models:
+  - name: stg_monitored_assets
+    columns:
+      - name: contract_address
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_eth_blocks
+    columns:
+      - name: block_number
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_eth_transactions
+    columns:
+      - name: transaction_hash
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_eth_receipts
+    columns:
+      - name: transaction_hash
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_stablecoin_wallet_activity
+    columns:
+      - name: wallet_address
+        tests:
+          - not_null
+      - name: asset_symbol
+        tests:
+          - not_null
+
+  - name: fct_daily_network_activity
+    columns:
+      - name: block_date
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_stablecoin_daily_flows
+    columns:
+      - name: block_date
+        tests:
+          - not_null
+      - name: asset_symbol
+        tests:
+          - not_null
+
+  - name: fct_stablecoin_network_share
+    columns:
+      - name: block_date
+        tests:
+          - not_null
+          - unique

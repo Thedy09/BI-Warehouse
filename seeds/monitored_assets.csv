@@ -1,0 +1,4 @@
+asset_name,asset_symbol,asset_type,chain,issuer,contract_address,decimals
+USD Coin,USDC,erc20,ethereum,Circle,0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48,6
+Tether USD,USDT,erc20,ethereum,Tether,0xdac17f958d2ee523a2206206994597c13d831ec7,6
+Dai Stablecoin,DAI,erc20,ethereum,MakerDAO,0x6b175474e89094c44da98b954eedeac495271d0f,18

@@ -1,0 +1,15 @@
+onchain_intelligence:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-gcp-project
+      dataset: onchain_intelligence
+      threads: 4
+      keyfile: /absolute/path/to/service-account.json
+      location: US
+      priority: interactive
+      retries: 1
+      timeout_seconds: 300
+

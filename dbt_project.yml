@@ -1,0 +1,25 @@
+name: onchain_intelligence
+version: 1.0.0
+config-version: 2
+
+profile: onchain_intelligence
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+clean-targets:
+  - target
+  - dbt_packages
+
+models:
+  onchain_intelligence:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  onchain_intelligence:
+    +quote_columns: false
+
+vars:
+  lookback_days: 30
