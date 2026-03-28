@@ -144,32 +144,6 @@ python3 scripts/build_llm_brief.py \
   --output-dir artifacts
 ```
 
-## Publish safely
-
-This repository is designed to be published without cloud credentials.
-
-Do not commit:
-
-- `service-account.json`
-- `~/.dbt/profiles.yml`
-- `.env`
-- `.streamlit/secrets.toml`
-- generated files containing private project information
-
-Use the provided examples instead:
-
-- [`.env.example`](.env.example)
-- [`profiles.example.yml`](profiles.example.yml)
-
-## Suggested GitHub presentation
-
-To make the repository stronger for recruiters:
-
-- keep the current architecture and SQL models visible
-- add one or two screenshots of the Streamlit dashboard
-- add a short note in the README after your first live BigQuery run
-- optionally publish a short Loom or GIF walkthrough
-
 ## Source references
 
 - Google Cloud Blockchain Analytics:
